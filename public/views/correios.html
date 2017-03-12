@@ -1,25 +1,76 @@
-<div class="row">
+<div class="container">
 
-<div class="col-sm-12">
-
-    <div class="col-sm-3">
-    <div class="card card-block">
-      <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180"
-      src="http://comunicadores.info/wp-content/uploads/2014/05/nova-marca-logo-correios.jpg"
-      data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
-
-      <div class="card-block">
-        <h4 class="card-title text-center">Servico de Calcular Prazo</h4>
+<div class="col-sm-2"></div>
 
 
-        <a class="btn btn-primary center-block" ng-click="redirecionaServicoPrazo()">Usar</a>
+<div class="col-sm-4">
+    <div class="form-area">
+        <form ng-submit="calculaPrazoDias()">
+        <br style="clear:both">
 
-      </div>
+          <h3 style="margin-bottom: 25px; text-align: center;">Calcula Dias</h3>
 
+          <div class="form-group">
+						<input type="text" class="form-control" ng-model="prazodias.nCdServico" placeholder="Codido Servico" required>
+					</div>
 
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="prazodias.sCepOrigem" placeholder="Cep Origem" required>
+					</div>
+
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="prazodias.sCepDestino" placeholder="Cep Destino" required>
+					</div>
+
+          <div class="form-group">
+            <label>Qtd Dias: {{resPrazo.PrazoEntrega}}</label>
+          </div>
+
+          <div class="form-group">
+              <label>Entrega Domiciliar: {{resPrazo.EntregaDomiciliar}}</label>
+          </div>
+
+         <input type="submit" value="Calcular" class="btn btn-primary">
+        </form>
     </div>
-    </div>
-
 </div>
 
+
+<div class="col-sm-4">
+    <div class="form-area">
+        <form ng-submit="calculaPrazoData()">
+        <br style="clear:both">
+
+          <h3 style="margin-bottom: 25px; text-align: center;">Calcula Data</h3>
+
+          <div class="form-group">
+						<input type="text" class="form-control" ng-model="prazodata.nCdServico" placeholder="Codido Servico" required>
+					</div>
+
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="prazodata.sCepOrigem" placeholder="Cep Origem" required>
+					</div>
+
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="prazodata.sCepDestino" placeholder="Cep Destino" required>
+					</div>
+
+          <div class="form-group">
+						<input type="text" class="form-control" ng-model="prazodata.sDtCalculo" placeholder="Data" required>
+					</div>
+
+          <div class="form-group">
+            <label>Qtd Dias: {{resPrazoData.PrazoEntrega}}</label>
+          </div>
+
+          <div class="form-group">
+              <label>Entrega Domiciliar: {{resPrazoData.EntregaDomiciliar}}</label>
+          </div>
+
+         <input type="submit" value="Calcular" class="btn btn-primary">
+        </form>
+    </div>
+</div>
+
+<div class="col-sm-2"></div>
 </div>
