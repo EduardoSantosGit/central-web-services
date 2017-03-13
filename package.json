@@ -12,6 +12,7 @@
     "body-parser": "^1.17.1",
     "consign": "^0.1.2",
     "express": "^4.15.2",
+    "restify": "^4.3.0",
     "soap": "^0.18.0"
   }
 }

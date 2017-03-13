@@ -11,4 +11,9 @@ angular.module('app', ['ngAnimate','ngRoute'])
      controller: 'CorreiosController'
   });
 
+  $routeProvider.when('/cep', {
+     templateUrl: 'views/cep.html',
+     controller: 'CepController'
+  });
+
 });

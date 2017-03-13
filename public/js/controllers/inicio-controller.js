@@ -8,5 +8,11 @@ angular.module('app')
 
       };
 
+      $scope.redirecionaCep = function(){
+
+           $location.path('/cep');
+
+      };
+
 
 });
