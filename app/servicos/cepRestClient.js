@@ -1,14 +1,13 @@
-var restity = require('restify');
+var restify = require('restify');
 
 function CepClient(){
-   this._cep = restity.createJsonClient({
-     url: 'viacep.com.br'
+   this._cep = restify.createJsonClient({
+     url: 'http://viacep.com.br'
    });
 }
 
 CepClient.prototype.buscaCep = function(args,callback){
-    this._cep.get('/ws/01001000/json/', callback);
-    console.log(callback);
+    this._cep.get('/ws/'+ args.cep +'/json/',callback);
 }
 
 

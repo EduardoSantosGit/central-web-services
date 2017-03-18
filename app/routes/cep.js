@@ -2,15 +2,20 @@ module.exports = function(app){
 
   app.post('/cep', function(req,res){
 
-      var dadosEntrada = '';//req.body;
-      console.log('chegou');
+      var dadosEntrada = req.body;
+      console.log(dadosEntrada);
       var cepRestClient = new app.servicos.cepRestClient();
-      cepRestClient.buscaCep(dadosEntrada,function(callback){
+      cepRestClient.buscaCep(dadosEntrada,function(exception,request,response,retorno){
+        console.log('controller' + JSON.stringify(retorno));
 
-              console.log(callback);
-          
+        if(exception){
+          res.status(500).send(erro);
+          return;
+        } else {
+          res.status(200).json(retorno);
+        }
+
       });
-
   });
 
 }

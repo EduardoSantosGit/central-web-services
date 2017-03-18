@@ -14,5 +14,11 @@ angular.module('app')
 
       };
 
+      $scope.redirecionaLoteria = function(){
+
+          $location.path('/loteria');
+
+      };
+
 
 });

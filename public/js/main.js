@@ -16,4 +16,9 @@ angular.module('app', ['ngAnimate','ngRoute'])
      controller: 'CepController'
   });
 
+  $routeProvider.when('/loteria', {
+     templateUrl: 'views/loteria.html',
+     controller: 'LoteriaController'
+  });
+
 });
