@@ -9,7 +9,7 @@ module.exports = function(app){
         console.log('controller' + JSON.stringify(retorno));
 
         if(exception){
-          res.status(500).send(erro);
+          res.status(500).send(exception);
           return;
         } else {
           res.status(200).json(retorno);
