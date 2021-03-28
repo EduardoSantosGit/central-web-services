@@ -2,7 +2,7 @@ var restify = require('restify');
 
 function LoteriaClient(){
    this._loteria = restify.createJsonClient({
-     url: 'http://wsloterias.azurewebsites.net'
+     url: ''
    });
 }
 
